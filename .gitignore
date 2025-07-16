@@ -1,0 +1,30 @@
+# Ignore
+
+*.env
+*.env*
+.DS_Store
+.cache/
+.devenv/
+.direnv/
+.dotenv/
+.env
+.idea/
+.phpactor.json
+.phpunit.cache/
+.phpunit.result.cache
+.vscode/
+build/
+infection.json5
+node_modules/
+phpunit.xml
+result
+result-*
+vendor/
+
+# Allow
+
+!.env.dist
+!.env.me
+!.env.vault
+!.envrc
+!tests/Fixture/**/*.env*
