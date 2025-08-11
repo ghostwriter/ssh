@@ -3,7 +3,6 @@
   "description": "[WIP] SSH wrapper written in PHP"
   "homepage": "https://github.com/ghostwriter/ssh"
   "topics": "ghostwriter, ssh, wip"
-  "private": false
   "has_issues": true
   "has_projects": false
   "has_wiki": false
