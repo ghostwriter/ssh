@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42f4d113b5719fe04afb4984ed3c8008",
+    "content-hash": "d3d8f2e9743c615880865fca51a49e2f",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -973,16 +973,16 @@
     "packages-dev": [
         {
             "name": "boundwize/structarmed",
-            "version": "0.4.4",
+            "version": "0.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/boundwize/structarmed.git",
-                "reference": "8147b85144f2c178522558cdaa39343c4e495745"
+                "reference": "0b80097ec00cac1319913df18230345db7852eec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/8147b85144f2c178522558cdaa39343c4e495745",
-                "reference": "8147b85144f2c178522558cdaa39343c4e495745",
+                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/0b80097ec00cac1319913df18230345db7852eec",
+                "reference": "0b80097ec00cac1319913df18230345db7852eec",
                 "shasum": ""
             },
             "require": {
@@ -1030,7 +1030,7 @@
             ],
             "support": {
                 "issues": "https://github.com/boundwize/structarmed/issues",
-                "source": "https://github.com/boundwize/structarmed/tree/0.4.4"
+                "source": "https://github.com/boundwize/structarmed/tree/0.4.5"
             },
             "funding": [
                 {
@@ -1038,7 +1038,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-12T05:52:29+00:00"
+            "time": "2026-05-12T16:06:53+00:00"
         },
         {
             "name": "ghostwriter/coding-standard",
