@@ -16,7 +16,7 @@ work in progress
 You can install the package via composer:
 
 ``` bash
-composer require ghostwriter/wip
+composer require ghostwriter/ssh
 ```
 
 ### Star ⭐️ this repo if you find it useful
@@ -32,7 +32,7 @@ You can also star (🌟) this repo to find it easier later.
 ### Credits
 
 - [Nathanael Esayeas](https://github.com/ghostwriter)
-- [All Contributors](https://github.com/ghostwriter/wip/contributors)
+- [All Contributors](https://github.com/ghostwriter/ssh/contributors)
 
 ### Changelog
 
