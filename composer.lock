@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "611084f9bf3a3b6600c4afb7d11f341c",
+    "content-hash": "91b48a87729aa118a4fa440c9180bb67",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -2019,16 +2019,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "13.2.5",
+            "version": "13.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2beef9f448c9e04914a273c89ff6d039f8b97bc8"
+                "reference": "5d2afe181339a56348ef9a80fa7eb806b7eae508"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2beef9f448c9e04914a273c89ff6d039f8b97bc8",
-                "reference": "2beef9f448c9e04914a273c89ff6d039f8b97bc8",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5d2afe181339a56348ef9a80fa7eb806b7eae508",
+                "reference": "5d2afe181339a56348ef9a80fa7eb806b7eae508",
                 "shasum": ""
             },
             "require": {
@@ -2099,7 +2099,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.2.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.2.6"
             },
             "funding": [
                 {
@@ -2107,7 +2107,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-07-25T06:59:14+00:00"
+            "time": "2026-07-28T14:00:09+00:00"
         },
         {
             "name": "sebastian/cli-parser",
