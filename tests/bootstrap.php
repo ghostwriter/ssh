@@ -12,18 +12,23 @@ if (! $classLoader instanceof ClassLoader) {
 }
 
 if (! \function_exists('ghostwriterRecursiveDirectoryRegexIterator')) {
-    function ghostwriterRecursiveDirectoryRegexIterator(string $path, string $regex): \Generator
+    /** @return iterable<\SplFileInfo> */
+    function ghostwriterRecursiveDirectoryRegexIterator(string $path, string $regex): iterable
     {
         $flags = \FilesystemIterator::FOLLOW_SYMLINKS | \FilesystemIterator::SKIP_DOTS;
         $recursiveDirectoryIterator = new \RecursiveDirectoryIterator($path, $flags);
         $recursiveIteratorIterator = new \RecursiveIteratorIterator($recursiveDirectoryIterator);
-        yield from new \RegexIterator($recursiveIteratorIterator, $regex);
+        /** @var \RegexIterator<array-key,\SplFileInfo,\RecursiveIteratorIterator> $regexIterator */
+        $regexIterator = new \RegexIterator($recursiveIteratorIterator, $regex);
+        yield from $regexIterator;
     }
 }
 
 if (! \function_exists('ghostwriterSupportedPHPVersion')) {
+    /** @return list<string> */
     function ghostwriterSupportedPHPVersion(): array
     {
+        /** @var list<string>|null $supportedPHPVersions */
         static $supportedPHPVersions = null;
         if (\is_array($supportedPHPVersions)) {
             return $supportedPHPVersions;
@@ -55,16 +60,13 @@ if (! \function_exists('ghostwriterSupportedPHPVersion')) {
 // load the Fixture files in the "Fixture" directory
 $fixturePath = \implode(\DIRECTORY_SEPARATOR, [__DIR__, 'Fixture']);
 if (\is_dir($fixturePath)) {
-    $classLoader->addPsr4('Tests\\Fixture\\', $fixturePath);
-    $classLoader->add('\\', $fixturePath);
+    $classLoader->addPsr4('', $fixturePath);
 }
 
 // load the Fixture files in the "Autoload" directory
 $autoloadPath = \implode(\DIRECTORY_SEPARATOR, [$fixturePath, 'Autoload']);
 if (\is_dir($autoloadPath)) {
-    $classLoader->addPsr4('Tests\\Fixture\\Autoload\\', $autoloadPath);
-    $classLoader->addPsr4('Tests\\Fixture\\', $autoloadPath);
-    $classLoader->add('\\', $autoloadPath);
+    $classLoader->addPsr4('', $autoloadPath);
 }
 
 // load the Fixture files in the "RequireOnce" directory
@@ -82,10 +84,7 @@ foreach (\ghostwriterSupportedPHPVersion() as $phpVersionName) {
         continue;
     }
 
-    $classLoader->addPsr4(\sprintf('Tests\\Fixture\\Autoload\\%s\\', $phpVersionName), $phpVersionPath);
-    $classLoader->addPsr4(\sprintf('Tests\\Fixture\\%s\\', $phpVersionName), $phpVersionPath);
-    $classLoader->addPsr4(\sprintf('%s\\', $phpVersionName), $phpVersionPath);
-    $classLoader->add('\\', $phpVersionPath);
+    $classLoader->addPsr4('', $phpVersionPath);
 }
 
 return $classLoader;
